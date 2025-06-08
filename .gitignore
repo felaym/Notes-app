@@ -28,3 +28,11 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+.yarn
+
+.pnp.cjs
+.pnp.loader.mjs
+
+*.vue.js
+*.js
