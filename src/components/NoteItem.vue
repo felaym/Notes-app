@@ -14,7 +14,7 @@ const formatDate = (date: Date) => {
     month: '2-digit',
     year: 'numeric',
     hour: '2-digit',
-    minute: '2-digit'
+    minute: '2-digit',
   }).format(date)
 }
 
@@ -33,11 +33,7 @@ const getImportanceColor = (importance: number) => {
         <span>Важливість:</span>
         <span class="value">{{ note.importance }}</span>
         <div class="dots">
-          <span
-            v-for="i in 5"
-            :key="i"
-            :class="{ active: i <= note.importance }"
-          />
+          <span v-for="i in 5" :key="i" :class="{ active: i <= note.importance }" />
         </div>
       </div>
       <span class="separator">•</span>

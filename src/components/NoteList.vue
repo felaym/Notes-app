@@ -21,19 +21,9 @@ const emit = defineEmits<{
   <div class="note-list">
     <h2>Список нотаток</h2>
     <ul>
-      <li
-        v-for="note in notes"
-        :key="note.id"
-        class="note-item"
-      >
+      <li v-for="note in notes" :key="note.id" class="note-item">
         <NoteItem :note="note" />
-        <button
-          @click="emit('remove', note.id)"
-          class="delete-btn"
-          title="Видалити"
-        >
-          ❌
-        </button>
+        <button @click="emit('remove', note.id)" class="delete-btn" title="Видалити">❌</button>
       </li>
     </ul>
   </div>

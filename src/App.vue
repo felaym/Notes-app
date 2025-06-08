@@ -17,17 +17,15 @@ function addNote(text: string, importance: number) {
     id: crypto.randomUUID(),
     text,
     importance,
-    createdAt: new Date()
+    createdAt: new Date(),
   })
 }
 
 function removeNote(id: string) {
-  notes.value = notes.value.filter(note => note.id !== id)
+  notes.value = notes.value.filter((note) => note.id !== id)
 }
 
-const sortedNotes = computed(() =>
-  [...notes.value].sort((a, b) => b.importance - a.importance)
-)
+const sortedNotes = computed(() => [...notes.value].sort((a, b) => b.importance - a.importance))
 </script>
 
 <template>

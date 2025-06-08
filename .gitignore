@@ -35,4 +35,4 @@ coverage
 .pnp.loader.mjs
 
 *.vue.js
-*.js
+main.js

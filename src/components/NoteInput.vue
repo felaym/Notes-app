@@ -21,17 +21,11 @@ function submit() {
   <div class="note-input">
     <h2>Додати нову нотатку</h2>
     <div class="input-group">
-      <input
-        v-model="newNote"
-        placeholder="Введіть текст нотатки..."
-        @keyup.enter="submit"
-      />
+      <input v-model="newNote" placeholder="Введіть текст нотатки..." @keyup.enter="submit" />
       <select v-model="importance">
         <option v-for="i in 5" :key="i" :value="i">{{ i }}</option>
       </select>
-      <button @click="submit">
-        Додати
-      </button>
+      <button @click="submit">Додати</button>
     </div>
   </div>
 </template>
